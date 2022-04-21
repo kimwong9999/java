@@ -9,6 +9,7 @@ public class Person {
 	private String job_title;
 	private int age;
 	private String gender;
+	private String dname;
 	
 	public Person(String sname, String fname, int height, int shoe_size, String job_title, int age, String gender)
 	{
@@ -19,6 +20,7 @@ public class Person {
 		this.job_title	= job_title;
 		this.age		= age;
 		this.gender		= gender;
+		this.dname		= fname + " " + sname;
 	}
 	
 	public Person(String sname, String fname, int height)
@@ -63,8 +65,20 @@ public class Person {
 		return shoe_size;
 	}
 	
-	public int Height()
+	public void PrintHeight()
 	{
-		return height;
+		System.out.println("The Height of " + dname + " is " + height + "cm");
+
+	}
+	
+	public void PrintAge()
+	{
+		System.out.println("The age of " + dname + " is " + age);
+
+	}
+	
+	public void PrintShoeSize()
+	{
+		System.out.println("The name is " + dname + " and the shoe size is " + shoe_size);
 	}
 }

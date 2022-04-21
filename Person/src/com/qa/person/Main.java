@@ -27,33 +27,34 @@ public class Main {
 
 		}
 		
-		int PersonId = 0;
+		Person person = people.get(0);
 		
-		System.out.println("The age of " + people.get(PersonId).Name() + " is " + people.get(PersonId).Age());
-
-		PersonId = 1;
+		person.PrintAge();
 		
-		System.out.println("The name is " + people.get(PersonId).Name() + " and the shoe size is " + people.get(PersonId).ShoeSize());
+		person = people.get(1);
+		
+		person.PrintShoeSize();
 
 		people.add(new Person("Clooney", "George", 690));
 		people.add(new Person("Roberts", "Julia", 600));
 		
-		PersonId = 2;
+		person = people.get(2);
 		
-		System.out.println("The Height of " + people.get(PersonId).Name() + " is " + people.get(PersonId).Height() + "cm");
-
-		PersonId = 3;
+		person.PrintHeight();
+				
+		person = people.get(3);
 		
-		System.out.println("The Height of " + people.get(PersonId).Name() + " is " + people.get(PersonId).Height() + "cm");
+		person.PrintHeight();
+		
 
 		
 		System.out.println("\nA List of the Person Database");
 		
 		ArrayList<String> persons = new ArrayList<>();
 		
-		for (Person person : people)
+		for (Person p : people)
 		{
-			persons.add(person.Sname() + "*" + person.Name());
+			persons.add(p.Sname() + "*" + p.Name());
 		}
 		
 		persons.sort(null);
